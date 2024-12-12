@@ -13,28 +13,28 @@ struct est {
     int qtd = 0;
 };
 
-int sum (est micale[], int size) {
-     return (size == 0) ? 0 : micale[size -1].qtd + sum(micale, size -1);    
+int sum (est restaurant[], int size) {
+     return (size == 0) ? 0 : restaurant[size -1].qtd + sum(restaurant, size -1);    
 }
 
 int main() {
-    struct est micale[MAX];
+    struct est restaurant[MAX];
     
     for (int i = 0; i < MAX; i++) {
-        cout<<"micale[" << i <<"].prod_name: ";
-        cin>>micale[i].prod_name;
-        cout<<"micale[" << i <<"].qtd: ";
-        cin>>micale[i].qtd;
+        cout<<"restaurant[" << i <<"].prod_name: ";
+        cin>>restaurant[i].prod_name;
+        cout<<"restaurant[" << i <<"].qtd: ";
+        cin>>restaurant[i].qtd;
     }
 
     cout << endl;
 
     for (int i = 0; i < MAX; i++) {
-        cout<<micale[i].prod_name;
-        cout<<"\t"<<micale[i].qtd << "\n";
+        cout<<restaurant[i].prod_name;
+        cout<<"\t"<<restaurant[i].qtd << "\n";
     }
     
-    int qtd_total = sum(micale, MAX);
+    int qtd_total = sum(restaurant, MAX);
      
     cout << "\nqtd_total: " << qtd_total;
     
